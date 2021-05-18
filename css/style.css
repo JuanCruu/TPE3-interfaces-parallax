@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+}
+
+.contenedor-loading p {
+    /* cuando pasen los 3 segundos la wea se a a trasladar hacia abajo */
+    margin-top: -4.4%;
+    margin-left: 52%;
+    color: white;
+    width: 90px;
+}
+
+.loading {
+    margin-top: 30%;
+    margin-left: 50%;
+    border: 13px solid #4d4d4d;
+    border-radius: 50%;
+    border-top: 12px solid #bdbdbd;
+    width: 90px;
+    height: 90px;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
