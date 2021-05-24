@@ -1,18 +1,16 @@
 body {
     background-color: black;
+    overflow-x: hidden;
 }
 
-.contenedor-loading p {
-    /* cuando pasen los 3 segundos la wea se a a trasladar hacia abajo */
-    margin-top: -4.4%;
-    margin-left: 52%;
-    color: white;
-    width: 90px;
+#contenido {
+    display: none;
+    /* opacity: 0; */
 }
 
 .loading {
-    margin-top: 30%;
-    margin-left: 50%;
+    margin-top: 50vh;
+    margin-left: 50vw;
     border: 13px solid #4d4d4d;
     border-radius: 50%;
     border-top: 12px solid #bdbdbd;
@@ -28,4 +26,95 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+}
+
+#chatarra {
+    top: 35%;
+    width: 40%;
+    height: 50%;
+    /* left: 3%; */
+    right: 55%;
+}
+
+#marciano {
+    width: 5%;
+    top: 10vh;
+    left: 5vw;
+}
+
+#chica {
+    /* width: 100px; */
+    top: 45vh;
+    /* left: 500px; */
+    width: 30vh;
+    right: 60%;
+}
+
+#chico {
+    /* width: 100px; */
+    top: 20vh;
+    left: 60vw;
+    width: 20vh;
+}
+
+#tanque {
+    /* width: 100px; */
+    /* top: 10vh;
+    width: 20vh; */
+    left: 75vw;
+}
+
+#fondo {
+    width: 100%;
+    top: 12vh;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 85vh;
+    /* left: 75vw; */
+}
+
+#tierra {
+    width: 100%;
+    height: 85vh;
+    left: 0vw;
+}
+
+#gravity {
+    position: absolute;
+    color: #ffff;
+    font-size: 5.5vw;
+    margin-top: -26px;
+    /* font-family: 'Gravity-Bold'; */
+    white-space: nowrap;
+    text-transform: uppercase;
+    /* z-index: 1000; */
 }
