@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         contenido.style.display = "inline"
         contenido.style.animation = "fadeIn 1s ease-in"
 
-    }, 3000);
+    }, 100);
 
 
     let chica = document.getElementById("chica");
