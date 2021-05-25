@@ -118,3 +118,43 @@ section img {
     text-transform: uppercase;
     /* z-index: 1000; */
 }
+
+@font-face {
+    font-family: Myfuente;
+    src: url(../font/digital-7.ttf);
+}
+
+.text-clock {
+    font-family: Myfuente;
+    /* position: absolute; */
+    /* bottom: 5%; */
+    text-align: center;
+    padding: 10px;
+    color: rgb(8, 73, 19);
+}
+
+#reloj {
+    border: 3px solid rgb(0, 0, 0);
+    /* border-radius: 5px; */
+    /* right: 0; */
+    top: 0;
+    padding-left: 15px;
+    position: absolute;
+    width: 255px;
+    /* height: 100%; */
+    /* background-color: rgb(255, 255, 255); */
+    text-align: center;
+    justify-content: center;
+}
+
+#info {
+    font-family: Myfuente;
+    font-size: 50px;
+    color: rgb(16, 134, 36);
+    padding: 0;
+    top: -10000%;
+}
+
+.contenedorReloj {
+    text-align: center;
+}

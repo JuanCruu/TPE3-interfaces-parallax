@@ -31,4 +31,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     })
+
+    function CountDown() {
+        let hoy = new Date();
+        let diaEvento = new Date("July 30,2021 00:00:00");
+
+        let tiempoActual = hoy.getTime();
+        let tiempoDelEvento = diaEvento.getTime();
+
+        let timepoRestante = tiempoDelEvento - tiempoActual;
+
+        let sec = Math.floor(timepoRestante / 1000)
+        let min = Math.floor(sec / 60)
+        let hrs = Math.floor(min / 60)
+        let days = Math.floor(hrs / 24)
+
+        hrs = hrs % 24
+        min = min % 60
+        sec = sec % 60
+
+        hrs = (hrs < 10) ? "0" + hrs : hrs;
+        min = (min < 10) ? "0" + min : min;
+        sec = (sec < 10) ? "0" + sec : sec;
+
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hrs;
+        document.getElementById("min").innerHTML = min;
+        document.getElementById("sec").innerHTML = sec;
+
+        setTimeout(CountDown, 1000);
+
+
+
+    }
+    CountDown();
+
+
+
+
+
 })
