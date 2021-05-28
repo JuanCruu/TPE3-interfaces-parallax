@@ -9,27 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, 100);
 
-
     let chica = document.getElementById("chica");
 
     window.addEventListener('scroll', () => {
         let value = window.scrollY + 1100;
-        console.log(chica.style.right);
-        console.log(value);
-
-        chica.style.right = value + "px";
-
-        chica.style.width = (value - 150) * 0.3 + "px";
-        chico.style.left = value + "px";
-
-
+        let value1 = window.scrollY + 'px';
+        // chica.style.right = value + "px";
+        chica.style.setProperty('right', `calc(60% + ${value1})`);
+        chica.style.setProperty('width', `calc(30vh + ${value1})`);
+        // chica.style.width = (value - 150) * 0.3 + "px";
+        chico.style.setProperty('left', `calc(60vw + ${window.scrollY+'px'})`);
         tierra.style.top = window.scrollY * 0.2 + "px";
         tanque.style.top = -window.scrollY + "px";
         chatarra.style.right = value + "px";
         chatarra.style.transform = "rotate(" + window.scrollY * 0.1 + "deg)";
-        marciano.style.transform = "rotate(" + window.scrollY * 0.1 + "deg)"
-
-
+        marciano.style.transform = "rotate(" + window.scrollY * 0.1 + "deg)";
     })
 
     function CountDown() {
@@ -67,8 +61,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     CountDown();
 
+    // ----------------Card------------------
 
+    const card = document.querySelector(".card");
+    const container = document.querySelector(".container")
+        ////////////////////////////////////////////////////////////////
 
+    const chicaSoga = document.querySelector(".chica-cuerda img")
+    card.addEventListener("mousemove", (evento) => {
+        let ejeX = (window.innerWidth / 2 - evento.pageX) / 25;
+        let ejeY = (window.innerHeight / 2 - evento.pageY) / 25;
+        card.style.transform = `rotateY(${ejeX}deg) rotateX(${ejeY}deg)`;
+        // card.style.transform = `rotate(${ejeX}deg)`
+        chicaSoga.style.transform = `rotateY(${ejeY}deg) rotateX(${ejeX}deg)`;
+        // chica.style.transform = `rotate(13deg) `
+        //hacer que la imagen espacio se mueva de arriba abajo o que rote
+    })
+    container.addEventListener("mouseout", (evento) => {
+        card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        // card.style.transform = `rotate(${ejeX}deg)`
+        // chica.style.transform = `rotateY(0deg) rotateX(0deg)`
+        // chica.style.transform = `rotate(20deg) `
+
+    })
+
+    // card.addEventListener("mouseover", (evento) => {
+    //     chica.style.transform = `rotateZ(20deg)`;
+    //     girar()
+    // })
+
+    // function girar() {
+
+    //     card.addEventListener("mousemove", (e) => {
+    //         // alert("adsd")
+    //     })
+    // }
 
 
 })

@@ -1,6 +1,9 @@
 body {
     background-color: black;
     overflow-x: hidden;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 #contenido {
@@ -46,7 +49,7 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    top: 12vh;
+    /* top: 12vh; */
 }
 
 section img {
@@ -96,7 +99,7 @@ section img {
 
 #fondo {
     width: 100%;
-    /* top: 10vh; */
+    top: 12vh;
     left: 0;
     padding: 0;
     margin: 0;
@@ -132,7 +135,7 @@ section img {
     /* bottom: 5%; */
     text-align: center;
     padding: 10px;
-    color: rgb(8, 73, 19);
+    color: rgb(97, 97, 97);
     /* display: inline-block; */
 }
 
@@ -165,7 +168,7 @@ section img {
 #info {
     font-family: Myfuente;
     font-size: 50px;
-    color: rgb(16, 134, 36);
+    color: rgb(185, 185, 185);
     padding: 0;
     /* top: -10000%; */
 }
@@ -176,4 +179,71 @@ section img {
     /* width: 100%;
     display: flex;
     justify-content: center; */
+}
+
+.description-movie {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    /* width: 70%; */
+    background-color: red;
+    color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* ------------------Card-------------------------- */
+
+.container {
+    width: 100vw;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: rgba(0, 0, 0, 0.602);
+    /* background-image: url(../image/cards/espacio.jpg); */
+}
+
+.card {
+    transform-style: preserve-3d;
+    min-height: 60vh;
+    width: 50rem;
+    border-radius: 5px;
+    padding: 0 0rem;
+    /* box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2); */
+    /* background-image: url(../image/cards/espacio.jpg); */
+    color: white;
+    overflow: hidden;
+    background: rgba(0, 0, 255, 0);
+}
+
+.chica-cuerda {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+}
+
+.chica-cuerda img {
+    width: 55rem;
+    padding-left: 10rem;
+    z-index: 2;
+    transition: all 750ms ease-out;
+    /* transform: rotate(20deg); */
+}
+
+.descripcion h1 {
+    font-size: 3rem;
+    transition: all 750ms ease-out;
+}
+
+.descripcion p {
+    font-size: 1rem;
+    transition: all 750ms ease-out;
+}
+
+.contenedor-cards {
+    background-image: url(../image/cards/espacio.jpg);
+    width: 100vw;
 }
