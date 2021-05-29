@@ -3,11 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(function() {
         let loading = document.getElementById("loading");
         let contenido = document.getElementById("contenido");
-        loading.style.display = "none"
-        contenido.style.display = "inline"
-        contenido.style.animation = "fadeIn 1s ease-in"
 
-    }, 100);
+        loading.style.animation = "fadeOut 2s linear"
+        loading.style.display = "none";
+
+        contenido.style.display = "block"
+        contenido.style.animation = "fadeIn 2s ease-in"
+
+
+
+
+
+
+    }, 3000);
 
     let chica = document.getElementById("chica");
 
@@ -64,12 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ----------------Card------------------
     const container = document.querySelector(".container")
-
     const card = document.querySelector(".card");
     const card2 = document.querySelector(".card2");
-
-
-
     const chicaSoga = document.querySelector(".chica-cuerda img")
     const chicoSoga = document.querySelector("#astronauta")
 
@@ -91,9 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // chica.style.transform = `rotate(13deg) `
         //hacer que la imagen espacio se mueva de arriba abajo o que rote
     })
+
     container.addEventListener("mouseout", (evento) => {
         card.style.transform = `rotateY(0deg) rotateX(0deg)`;
         card2.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        chicoSoga.style.transform = `rotateY(0deg) rotateX(0deg)`;
+
 
         // card.style.transform = `rotate(${ejeX}deg)`
         // chica.style.transform = `rotateY(0deg) rotateX(0deg)`
