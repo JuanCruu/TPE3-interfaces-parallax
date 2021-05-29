@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
         let value = window.scrollY + 1100;
         let value1 = window.scrollY + 'px';
+        console.log(window.scrollY);
         // chica.style.right = value + "px";
         chica.style.setProperty('right', `calc(60% + ${value1})`);
         chica.style.setProperty('width', `calc(30vh + ${value1})`);
@@ -85,17 +86,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     })
 
-    // card.addEventListener("mouseover", (evento) => {
-    //     chica.style.transform = `rotateZ(20deg)`;
-    //     girar()
-    // })
+    // ----------------Carrusel------------------
+    let contador = 1;
 
-    // function girar() {
+    function setearContador() {
 
-    //     card.addEventListener("mousemove", (e) => {
-    //         // alert("adsd")
-    //     })
-    // }
+        alert("value")
+    }
+    setInterval(function() {
+        let divRadio = document.getElementById('radio' + contador);
+        divRadio.checked = true;
+        console.log(contador)
+        contador++
+        if (contador == 5) {
+            contador = 1;
+        }
+
+    }, 5000);
+
+    function aaa() {
+        alert("asdasd")
+    }
 
 
-})
+
+});
