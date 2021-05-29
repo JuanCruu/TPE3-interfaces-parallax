@@ -63,12 +63,25 @@ document.addEventListener("DOMContentLoaded", () => {
     CountDown();
 
     // ----------------Card------------------
+    const container = document.querySelector(".container")
 
     const card = document.querySelector(".card");
-    const container = document.querySelector(".container")
-        ////////////////////////////////////////////////////////////////
+    const card2 = document.querySelector(".card2");
+
+
 
     const chicaSoga = document.querySelector(".chica-cuerda img")
+    const chicoSoga = document.querySelector("#astronauta")
+
+    card2.addEventListener("mousemove", (evento) => {
+        let ejeX = (window.innerWidth / 2 - evento.pageX) / 25;
+        let ejeY = (window.innerHeight / 2 - evento.pageY) / 25;
+        console.log(ejeX, ejeY);
+        card2.style.transform = `rotateY(${ejeX+4}deg) rotateX(${ejeY+4}deg)`;
+        chicoSoga.style.transform = `rotateY(${ejeX}deg) rotateX(${ejeY}deg)`;
+    })
+
+
     card.addEventListener("mousemove", (evento) => {
         let ejeX = (window.innerWidth / 2 - evento.pageX) / 25;
         let ejeY = (window.innerHeight / 2 - evento.pageY) / 25;
@@ -80,6 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     container.addEventListener("mouseout", (evento) => {
         card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        card2.style.transform = `rotateY(0deg) rotateX(0deg)`;
+
         // card.style.transform = `rotate(${ejeX}deg)`
         // chica.style.transform = `rotateY(0deg) rotateX(0deg)`
         // chica.style.transform = `rotate(20deg) `
