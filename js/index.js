@@ -10,11 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
         contenido.style.display = "block"
         contenido.style.animation = "fadeIn 2s ease-in"
 
-
-
-
-
-
     }, 3000);
 
     let chica = document.getElementById("chica");
@@ -22,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
         let value = window.scrollY + 1100;
         let value1 = window.scrollY + 'px';
-        console.log(window.scrollY);
+        // console.log(window.scrollY);
         // chica.style.right = value + "px";
         chica.style.setProperty('right', `calc(60% + ${value1})`);
         chica.style.setProperty('width', `calc(30vh + ${value1})`);
@@ -89,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("mousemove", (evento) => {
         let ejeX = (window.innerWidth / 2 - evento.pageX) / 25;
         let ejeY = (window.innerHeight / 2 - evento.pageY) / 25;
+        // console.log(ejeX, ejeY);
         card.style.transform = `rotateY(${ejeX}deg) rotateX(${ejeY}deg)`;
         // card.style.transform = `rotate(${ejeX}deg)`
         chicaSoga.style.transform = `rotateY(${ejeY}deg) rotateX(${ejeX}deg)`;
@@ -110,15 +106,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ----------------Carrusel------------------
     let contador = 1;
+    document.querySelectorAll(".radioo").forEach(r => {
+        // console.log(r);
+        r.addEventListener("click", (evento) => {
+            let counterValue = r.getAttribute("data-info")
+                // console.log(counterValue);
+            contador = counterValue;
+        })
+
+    })
+
+
 
     function setearContador() {
 
         alert("value")
     }
+
     setInterval(function() {
         let divRadio = document.getElementById('radio' + contador);
         divRadio.checked = true;
-        console.log(contador)
+        // console.log(contador)
         contador++
         if (contador == 5) {
             contador = 1;
