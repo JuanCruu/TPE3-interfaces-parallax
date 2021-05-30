@@ -138,6 +138,21 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("asdasd")
     }
 
+    // menu amborgesa
+    const toggle = document.getElementById("toggle");
+    const menu = document.querySelector('.menu')
+    console.log(menu);
+    let boleano = false;
+    toggle.onclick = function() {
+        boleano = !boleano;
+        toggle.classList.toggle('active');
+        if (boleano) {
+            menu.style.transform = "translateX(0%)";
+        } else {
+            menu.style.transform = "translateX(-120%)";
+        }
 
+
+    };
 
 });
