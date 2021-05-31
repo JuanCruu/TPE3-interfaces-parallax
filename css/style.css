@@ -436,8 +436,8 @@ span::before {
 
 /* menu burger */
 
-.aaa {
-    background-color: aqua;
+.pushpin {
+    /* su unico trabajo es mantener el menu clavado en el rincon  */
     height: 0;
     /* top: -300px; */
     /* z-index: 3; */
@@ -527,6 +527,11 @@ ul li {
 ul li a {
     text-decoration: none;
     color: black
+}
+
+.out {
+    /* text-decoration: dotted; */
+    color: rgb(255, 9, 9)
 }
 
 li:hover {

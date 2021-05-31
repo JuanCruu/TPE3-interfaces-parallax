@@ -11,6 +11,26 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         
+        .loading {
+            margin-top: 50vh;
+            margin-left: 50vw;
+            border: 13px solid #4d4d4d;
+            border-radius: 50%;
+            border-top: 12px solid #bdbdbd;
+            width: 65px;
+            height: 65px;
+            animation: girar 1s linear infinite;
+        }
+        
+        @keyframes girar {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
         .fondo {
             display: flex;
             justify-content: center;
@@ -20,10 +40,12 @@
             /* transform: translate(0%, -50%); */
             /* background-position: 30% 30%; */
             background-image: url(../image/behindthescenes/a.jpeg);
+            /* background-image: url(https://www.teahub.io/photos/full/18-182020_film-production-wallpaper-data-src-production-behind-the.jpg); */
             width: 100vw;
-            height: 124vh;
-            /* background-repeat: repeat; */
-            /* animation: zoom 20s linear infinite;  */
+            height: 100%;
+            background-repeat: repeat;
+            object-fit: scale-down;
+            animation: zoom 20s linear infinite;
             animation-direction: alternate;
             /* background-color: red; */
         }
@@ -31,7 +53,7 @@
         .accordion {
             border-radius: 1px;
             max-width: 1300px;
-            height: 100%;
+            height: 120%;
             display: inline-block;
             position: relative;
             left: 50%;
@@ -86,6 +108,24 @@
             opacity: 1;
             transform: translate(0, 0);
             z-index: 2;
+        }
+        
+        .card-imagen {
+            display: flex;
+            justify-content: center;
+            /* max-width: 800px; */
+            max-height: 800px;
+            /* margin-top: 14px; */
+            position: relative;
+            overflow: hidden;
+            opacity: 1;
+            transform: translate(0, 0);
+            z-index: 2;
+        }
+        
+        .card-imagen img {
+            max-width: 800px;
+            /* box-shadow: 0px 2px 2px 7px #000000; */
         }
         
         ul {
@@ -148,6 +188,7 @@
             transform: translate(2px, 0) rotate(-45deg)
         }
         
+        .card-imagen,
         p,
         ul li i:before,
         ul li i:after {
@@ -169,6 +210,13 @@
             transform: translate(0, 50%);
         }
         
+        ul li input[type=checkbox]:checked~.card-imagen {
+            margin-top: 0;
+            max-height: 0;
+            opacity: 0;
+            transform: translate(0, 50%);
+        }
+        
         ul li input[type=checkbox]:checked~i:before {
             transform: translate(2px, 0) rotate(45deg)
         }
@@ -183,4 +231,19 @@
             justify-content: center;
             padding-bottom: 20px;
             /* background-color: red; */
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        #contenidoDDCamaras {
+            /* opacity: 0; */
+            display: none;
+            /* animation: fadeIn 5s linear ease-out; */
         }

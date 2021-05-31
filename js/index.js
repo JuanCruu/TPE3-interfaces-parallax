@@ -3,17 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(function() {
         let loading = document.getElementById("loading");
         let contenido = document.getElementById("contenido");
-
         loading.style.animation = "fadeOut 2s linear"
         loading.style.display = "none";
-
         contenido.style.display = "block"
         contenido.style.animation = "fadeIn 2s ease-in"
-
     }, 3000);
 
     let chica = document.getElementById("chica");
-
     window.addEventListener('scroll', () => {
         let value = window.scrollY + 1100;
         let value1 = window.scrollY + 'px';
@@ -89,14 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // card.style.transform = `rotate(${ejeX}deg)`
         chicaSoga.style.transform = `rotateY(${ejeY}deg) rotateX(${ejeX}deg)`;
         // chica.style.transform = `rotate(13deg) `
-        //hacer que la imagen espacio se mueva de arriba abajo o que rote
+
     })
 
     container.addEventListener("mouseout", (evento) => {
         card.style.transform = `rotateY(0deg) rotateX(0deg)`;
         card2.style.transform = `rotateY(0deg) rotateX(0deg)`;
         chicoSoga.style.transform = `rotateY(0deg) rotateX(0deg)`;
-
 
         // card.style.transform = `rotate(${ejeX}deg)`
         // chica.style.transform = `rotateY(0deg) rotateX(0deg)`
@@ -138,10 +133,10 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("asdasd")
     }
 
-    // menu amborgesa
+    // menu amburguesa
     const toggle = document.getElementById("toggle");
     const menu = document.querySelector('.menu')
-    console.log(menu);
+        // console.log(menu);
     let boleano = false;
     toggle.onclick = function() {
         boleano = !boleano;
@@ -154,5 +149,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     };
+
+    // tardar 3 segundos en redirigir a algun lugar de la pagina
+    document.querySelectorAll(".out").forEach(s => {
+
+        s.addEventListener("click", (e) => {
+            e.preventDefault()
+                // console.log(s.pathname)
+                // location.href = s.pathname;
+
+            loading.style.display = "block";
+            contenido.style.display = "none"
+
+            setTimeout(function() {
+                location.href = s.href;
+            }, 3000);
+        })
+    })
+
 
 });
