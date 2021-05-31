@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         divRadio.checked = true;
         // console.log(contador)
         contador++
-        if (contador == 5) {
+        if (contador == 8) {
             contador = 1;
         }
 

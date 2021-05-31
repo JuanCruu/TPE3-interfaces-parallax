@@ -362,6 +362,18 @@ section img {
     margin-left: -60%;
 }
 
+#radio5:checked~.first {
+    margin-left: -80%;
+}
+
+#radio6:checked~.first {
+    margin-left: -100%;
+}
+
+#radio7:checked~.first {
+    margin-left: -120%;
+}
+
 
 /* star */
 
