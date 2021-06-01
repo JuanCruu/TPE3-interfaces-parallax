@@ -95,6 +95,7 @@ section img {
     /* left: 500px; */
     width: 30vh;
     right: 60%;
+    animation: entradaDerecha 1s ease-in;
 }
 
 #chico {
@@ -102,6 +103,7 @@ section img {
     top: 20vh;
     left: 60vw;
     width: 20vh;
+    animation: entradaIzquierda 1s ease-in;
 }
 
 #tanque {
@@ -159,6 +161,7 @@ section img {
     /* background-color: rgb(223, 0, 0); */
     z-index: 1;
     margin-top: -4px;
+    animation: entradaArriba 2s ease-out;
 }
 
 #reloj {
@@ -197,6 +200,10 @@ section img {
     margin: auto;
     color: rgb(255, 255, 255);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation-name: entradaIzquierda;
+    animation-duration: 2s;
+    /* animation-delay: 1s; */
+    transition: .5s;
 }
 
 
@@ -264,11 +271,13 @@ section img {
 #astronautaChico {
     background-color: rgba(0, 0, 0, 0.65);
     height: 338px;
+    animation: entradaDerecha 2s ease-out;
 }
 
 #astronautaChica {
     background-color: rgba(0, 0, 0, 0.65);
     /* margin-bottom: 30px; */
+    animation: entradaIzquierda 2s ease-out;
 }
 
 #astronautaChica:hover {
@@ -550,4 +559,31 @@ li:hover {
     /* background-color: rgba(0, 0, 0, 0.65); */
     /* color: white; */
     text-decoration: underline;
+}
+
+@keyframes entradaIzquierda {
+    0% {
+        transform: translateX(-120%)
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+@keyframes entradaDerecha {
+    0% {
+        transform: translateX(120%)
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+@keyframes entradaArriba {
+    0% {
+        transform: translateY(-120%)
+    }
+    100% {
+        transform: translateX(0%)
+    }
 }
