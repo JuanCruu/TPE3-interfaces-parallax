@@ -13,13 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
         let value = window.scrollY + 1100;
         let value1 = window.scrollY + 'px';
-        // console.log(window.scrollY);
+
+        if (window.scrollY > 320) {
+            gravity.style.setProperty('top', `calc(30vh + ${window.scrollY}+px)`);
+        } else {
+            gravity.style.setProperty('top', `calc(30vh + ${value1})`);
+        }
         // chica.style.right = value + "px";
         chica.style.setProperty('right', `calc(60% + ${value1})`);
         chica.style.setProperty('width', `calc(30vh + ${value1})`);
         // chica.style.width = (value - 150) * 0.3 + "px";
         chico.style.setProperty('left', `calc(60vw + ${window.scrollY+'px'})`);
-        tierra.style.top = window.scrollY * 0.2 + "px";
+        // tierra.style.top = window.scrollY * 0.2 + "px";
         tanque.style.top = -window.scrollY + "px";
         chatarra.style.right = value + "px";
         chatarra.style.transform = "rotate(" + window.scrollY * 0.1 + "deg)";

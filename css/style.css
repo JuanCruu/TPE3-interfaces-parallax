@@ -61,9 +61,14 @@ section {
     height: 80vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     overflow: hidden;
     /* top: 12vh; */
+}
+
+#gravity {
+    top: 30vh;
+    /* max-height: 100px; */
 }
 
 section img {
@@ -115,7 +120,7 @@ section img {
 
 #fondo {
     width: 100%;
-    top: 12vh;
+    /* top: 12vh; */
     left: 0;
     padding: 0;
     margin: 0;
@@ -150,42 +155,51 @@ section img {
     /* position: absolute; */
     /* bottom: 5%; */
     text-align: center;
-    padding: 10px;
-    color: rgb(97, 97, 97);
+    /* padding: 10px; */
+    /* padding-bottom: 600px; */
+    /* background-color: red; */
+    color: rgb(255, 255, 255);
+    /* padding-top: -20px; */
     /* display: inline-block; */
 }
 
 .contenedorReloj {
-    /* width: 100vw; */
-    /* position: absolute; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     /* background-color: rgb(223, 0, 0); */
+    border-top: #fff 2px solid;
+    border-bottom: #fff 2px solid;
+    width: auto;
+    height: 18vh;
     z-index: 1;
-    margin-top: -4px;
-    animation: entradaArriba 2s ease-out;
+    /* margin-top: -4px; */
+    /* animation: entradaArriba 2s ease-out; */
+}
+
+.titulos {
+    color: rgb(255, 255, 255);
+    display: block;
+    /* background-color: red; */
+    padding: 10px;
 }
 
 #reloj {
-    /* display: inline-block; */
-    /* border: 3px solid rgb(0, 0, 0); */
-    /* border-radius: 5px; */
-    /* right: 0; */
-    /* top: 0; */
-    /* margin-left: 50px; */
+    /* top: 10px; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: none;
     position: absolute;
     z-index: 1;
-    /* width: 100%; */
-    left: 50%;
-    transform: translate(-50%, 0);
-    /* height: 100%; */
-    background-color: rgb(0, 0, 0);
-    /* /* text-align: center; */
-    /* justify-content: center; */
+    /* left: 50%;
+    transform: translate(-50%, 0); */
 }
 
 #info {
     font-family: Myfuente;
     font-size: 50px;
-    color: rgb(185, 185, 185);
+    color: rgb(255, 255, 255);
     padding: 0;
     /* top: -10000%; */
 }
@@ -459,9 +473,11 @@ span::before {
 
 .pushpin {
     /* su unico trabajo es mantener el menu clavado en el rincon  */
-    height: 0;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    /* border-bottom: #fff 2px solid; */
     /* top: -300px; */
-    /* z-index: 3; */
+    z-index: 3;
 }
 
 #toggle {
@@ -499,17 +515,17 @@ span::before {
 }
 
 #toggle.active {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 #toggle.active::before {
     transform: translateY(0px) rotate(45deg);
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     box-shadow: 0 0 0 white;
 }
 
 #toggle.active::after {
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     transform: translateY(0px) rotate(-45deg);
     ;
 }
@@ -519,7 +535,7 @@ span::before {
     z-index: 23;
     position: relative;
     width: 250px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     transform: translateX(-120%);
     transition: .2s;
     border-radius: 2px;
@@ -530,14 +546,15 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    /* margin-left: 20px; */
     display: block;
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
 }
 
 ul li {
     position: relative;
-    padding: 0;
+    padding: 20px;
     margin: 0;
     margin-left: 4px;
     padding-bottom: 4px;
@@ -547,18 +564,26 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: black
+    color: rgb(255, 255, 255);
+    /* padding: 20px; */
 }
 
 .out {
     /* text-decoration: dotted; */
-    color: rgb(255, 9, 9)
+    color: rgb(255, 255, 255)
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
 li:hover {
     /* background-color: rgba(0, 0, 0, 0.65); */
     /* color: white; */
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 @keyframes entradaIzquierda {
