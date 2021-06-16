@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let value = window.scrollY + 1100;
         let value1 = window.scrollY + 'px';
 
-        if (window.scrollY > 320) {
+        if (window.scrollY > 300) {
             gravity.style.setProperty('top', `calc(30vh + ${window.scrollY}+px)`);
             reloj.style.setProperty('top', `calc(39vh + ${value1})`);
         } else {
