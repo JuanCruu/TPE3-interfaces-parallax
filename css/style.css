@@ -68,6 +68,7 @@ section {
 
 #gravity {
     top: 30vh;
+    text-shadow: 1px 1px 2px black;
     /* border-radius: 10px; */
     /* box-shadow: rgba(0, 0, 0, ); */
     /* max-height: 100px; */
@@ -158,6 +159,7 @@ section img {
     /* bottom: 5%; */
     text-align: center;
     /* padding: 10px; */
+    margin-top: -10px;
     /* padding-bottom: 600px; */
     /* background-color: red; */
     color: rgb(255, 255, 255);
@@ -188,19 +190,32 @@ section img {
 }
 
 #reloj {
-    /* top: 10px; */
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* background-color: #000000; */
+    top: 39vh;
+    left: 8vw;
+    /* padding-top: 50px; */
+    /* padding-bottom: 50px; */
     border: none;
-    position: absolute;
+    position: relative;
     z-index: 1;
     /* left: 50%;
     transform: translate(-50%, 0); */
 }
 
+td {
+    text-shadow: 1px 1px 2px black;
+}
+
+.tituloEstreno {
+    color: rgb(156, 0, 0);
+    font-family: roboto;
+}
+
 #info {
     font-family: Myfuente;
-    font-size: 50px;
+    position: relative;
+    font-size: 40px;
+    margin-top: 10px;
     color: rgb(255, 255, 255);
     padding: 0;
     /* top: -10000%; */

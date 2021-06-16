@@ -16,8 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (window.scrollY > 320) {
             gravity.style.setProperty('top', `calc(30vh + ${window.scrollY}+px)`);
+            reloj.style.setProperty('top', `calc(39vh + ${value1})`);
         } else {
             gravity.style.setProperty('top', `calc(30vh + ${value1})`);
+            reloj.style.setProperty('top', `calc(39vh + ${value1})`);
         }
         // chica.style.right = value + "px";
         chica.style.setProperty('right', `calc(60% + ${value1})`);
