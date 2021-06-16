@@ -56,10 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
         sec = (sec < 10) ? "0" + sec : sec;
 
 
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hrs;
-        document.getElementById("min").innerHTML = min;
-        document.getElementById("sec").innerHTML = sec;
+        document.getElementById("days").innerHTML = days + " Days  ";
+        document.getElementById("hours").innerHTML = hrs + " Hrs ";
+        document.getElementById("min").innerHTML = min + " Min ";
+        document.getElementById("sec").innerHTML = sec + "  Sec";
 
         setTimeout(CountDown, 1000);
 

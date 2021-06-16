@@ -191,30 +191,35 @@ section img {
 
 #reloj {
     /* background-color: #000000; */
-    top: 39vh;
-    left: 8vw;
+    /* 
+    left: 8vw; */
     /* padding-top: 50px; */
     /* padding-bottom: 50px; */
+    top: 39vh;
     border: none;
-    position: relative;
+    position: absolute;
     z-index: 1;
     /* left: 50%;
     transform: translate(-50%, 0); */
 }
 
-td {
+td,
+tr {
     text-shadow: 1px 1px 2px black;
+    border-collapse: collapse;
+    padding: 5px;
+    padding-top: 0px;
 }
 
 .tituloEstreno {
     color: rgb(255, 40, 2);
-    font-family: roboto;
+    /* font-family: roboto; */
 }
 
 #info {
-    font-family: Myfuente;
+    /* font-family: Myfuente; */
     position: relative;
-    font-size: 40px;
+    font-size: 25px;
     margin-top: 10px;
     color: rgb(255, 255, 255);
     padding: 0;
