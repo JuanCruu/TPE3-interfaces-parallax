@@ -13,20 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }, 3000);
 
-        document.querySelectorAll(".card-imagen").forEach(c => {
+        // document.querySelectorAll(".card-imagen").forEach(c => {
 
-            // console.log(c)
-            // let ejeX = (window.innerWidth / 2 - e.pageX) / 25;
-            // let ejeY = (window.innerHeight / 2 - e.pageY) / 25;
-            c.addEventListener("mouseover", (e) => {
-                c.style.transform = `rotateY(10deg)rotateX(-10deg)  `;
-                // alert("s")
-            })
-            c.addEventListener("mouseout", (e) => {
-                c.style.transform = `rotateY(0deg) `;
-                // alert("s")
-            })
-        })
+
+        //     c.addEventListener("mouseover", (e) => {
+        //         c.style.transform = `rotateY(10deg)rotateX(-10deg)  `;
+
+        //     })
+        //     c.addEventListener("mouseout", (e) => {
+        //         c.style.transform = `rotateY(0deg) `;
+
+        //     })
+        // })
     })
     // menu amburguesa
 const toggle = document.getElementById("toggle");

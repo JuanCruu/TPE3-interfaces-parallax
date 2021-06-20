@@ -12,6 +12,7 @@
         body {
             background-image: url(../image/behindthescenes/photo-1464802686167-b939a6910659.jpg) !important;
             object-fit: cover !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
             /* background-repeat: no-repeat !important; */
             /* display: flex;
             justify-content: center;
@@ -72,6 +73,21 @@
             transform: translate(-50%, 0);
             /* margin: 90px 0; */
             background-color: #ffffff;
+            animation: accordion 2s ease-out;
+            /* animation-delay: 3s; */
+            transition: 1s;
+            overflow: hidden;
+        }
+        
+        @keyframes accordion {
+            0% {
+                max-height: 0px;
+                /* background-color: red; */
+            }
+            100% {
+                max-height: 2000px;
+                /* background-color: red; */
+            }
         }
         
         @keyframes zoom {
@@ -84,6 +100,7 @@
         }
         
         h1 {
+            margin: 20px;
             padding-left: 50%;
             /* display: inline-block */
             transform: translate(-50%, 0);
@@ -111,8 +128,8 @@
         p {
             max-height: 800px;
             margin-top: 14px;
-            color: rgba(48, 69, 92, 0.8);
-            font-size: 17px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 20px;
             line-height: 26px;
             letter-spacing: 1px;
             position: relative;
@@ -138,6 +155,12 @@
         .card-imagen img {
             max-width: 800px;
             /* box-shadow: 0px 2px 2px 7px #000000; */
+            transition: 0.5s;
+        }
+        
+        .card-imagen img:hover {
+            transform: perspective(890px) translate3d(0px, 10px, 340px);
+            transition: 0.5s;
         }
         
         ul {
